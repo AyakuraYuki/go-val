@@ -13,5 +13,5 @@ import (
 or to pin the version:
 
 ```shell
-go get -u 'github.com/AyakuraYuki/go-val/val'
+go get -u 'github.com/AyakuraYuki/go-val'
 ```
