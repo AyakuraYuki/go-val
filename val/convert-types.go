@@ -376,3 +376,16 @@ func TimeSlice(src []time.Time) []*time.Time                          { return t
 func TimeValueSlice(src []*time.Time) []time.Time                     { return toValueSlice(src) }
 func TimeMap[K comparable](src map[K]time.Time) map[K]*time.Time      { return toMap(src) }
 func TimeValueMap[K comparable](src map[K]*time.Time) map[K]time.Time { return toValueMap(src) }
+
+// Ptr
+
+// Ptr returns a pointer to its argument.
+// It can be used to initialize pointer fields.
+func Ptr[T any](t T) *T { return &t }
+
+func Val[T any](v *T) T {
+	if v == nil {
+		return *new(T)
+	}
+	return *v
+}
